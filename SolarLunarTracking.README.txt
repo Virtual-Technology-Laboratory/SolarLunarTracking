@@ -1,41 +1,24 @@
 
-Slide Projector
-===============
+Solar Lunar Tracking (Unity 5)
+==============================
 
-SlideProjector.unitypackage contains a prefab of a Projector object with a
-customized shader capable of projecting textures onto surfaces.
+The SolarLunarTracking.unitypackage package for Unity 5 provides astronomically
+accurate solar and lunar tracking. The tracking is used to position the sun and
+moon.
 
-Placing the Projector
+Getting Started
 ---------------------
-The projector is intended to display thematic color maps on the terrain and is
-oriented towards the ground. The x, z position cooresponds to the center of the 
-projector. The projector is configured with an orthographic projection. The 
-"Orthographic Size" specifies the radius.
+This project depends on the SimTimeControls package published by the VTL.
 
-For more details see: http://docs.unity3d.com/ScriptReference/Projector.html
+To use this package first add the SimTimeControls prefab to your scene. Then
+place the SolarLunarTracking prefab in your scene. Position the prefab such that 
+it is centered on your terrain.
 
+In the inspector specify your location and UTM timezone in the fields provided 
+under the "Solar Lunar Tracking Geolocation" component of the SolarLunarTracking 
+GameObject.
 
-Shader and Material Details
----------------------------
+Make sure the clipping distance of your main camera is beyond ~8000 meters to 
+ensure the moon is visible. Or move the Plane under Moon to within your viewing
+range. 
 
-To avoid tiling and other problems the slide image resources needs to:
-   1. Have transparency along all four sides
-   2. Be imported as "Advanced"
-   3. Have wrap mode set to clamp
-   4. Have generate mipmaps disabled
-   
-The addTransparentBorder.py script will add a transparent border to RGB and RGBA
-images. 
-
-
-Procedurally Slide Changes
---------------------------
-
-Slides can be procedurally changed by setting the "_ShadowTex" texture of the 
-projector's material.
- 
- 
-Opacity Control
---------------------------
-The opacity of the shader can specified by setting "_Opacity" on the
-projector's material. The opacity should be between 0 and 1.
