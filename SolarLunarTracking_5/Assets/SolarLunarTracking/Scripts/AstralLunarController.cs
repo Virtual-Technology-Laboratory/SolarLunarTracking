@@ -11,7 +11,7 @@ public class AstralLunarController : MonoBehaviour
     private float altitude = 1160;
     private float timeZone = -7;
 
-    private Light moon;
+//    private Light moon;
     private GameObject plane;
     private List<Texture> moonTextures;
     private int currentTex = 11;
@@ -47,14 +47,14 @@ public class AstralLunarController : MonoBehaviour
         TimeSliderScript = (TimeSlider)slider.GetComponent(typeof(TimeSlider));
 
         astral = new Astral(longitude, latitude, altitude, timeZone);
-        moon = transform.Find("Plane").gameObject.GetComponent<Light>();
+//        moon = transform.Find("Plane").gameObject.GetComponent<Light>();
         plane = transform.Find("Plane").gameObject;
 
         moonTextures = new List<Texture>();
         for (int i =0; i<28; i++)
         {
-            string fname = string.Format("Assets/SolarLunarTracking/moonTextures/Moon{0}.png", i.ToString("D2"));
-            moonTextures.Add(Resources.LoadAssetAtPath<Texture>(fname));
+            string fname = string.Format("Moon{0}.png", i.ToString("D2"));
+            moonTextures.Add(UnityEngine.Resources.Load<Texture>(fname));
         }
     }
 

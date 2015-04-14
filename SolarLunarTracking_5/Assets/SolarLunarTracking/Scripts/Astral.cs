@@ -269,7 +269,7 @@ public class Astral
     {
         int rA = A.GetLength(0);
         int cA = A.GetLength(1);
-        int rB = B.GetLength(0);
+//        int rB = B.GetLength(0);
         int cB = B.GetLength(1);
         double temp = 0;
         double[,] kHasil = new double[rA, cB];
@@ -956,11 +956,12 @@ public class Astral
         double lambda_sun = fixangle(Ec + C.ecliptic_longitude_perigee);
 
         // Orbital distance factor
-        double F = ((1 + C.eccentricity * cos(radians(Ec))) / (1 - pow(C.eccentricity, 2)));
+//        double F = ((1 + C.eccentricity * cos(radians(Ec))) / (1 - pow(C.eccentricity, 2)));
 
         //       // Distance to Sun in km
         //       double sun_dist = C.sun_smaxis / F;
         //       double sun_angular_diameter = F * C.sun_angular_size_smaxis;
+   
 
         ////////////////
         //

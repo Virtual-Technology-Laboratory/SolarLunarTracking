@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class SolarTrackingGeolocation : MonoBehaviour 
+public class SolarLunarTrackingGeolocation : MonoBehaviour 
 {
 
     public float latitude = 43f;

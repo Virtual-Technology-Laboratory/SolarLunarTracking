@@ -35,8 +35,6 @@ public class AstralSunController : MonoBehaviour
         set { solar = value; }
     }
 
-    private Flare flare;
-
     // Use this for initialization
     void Start()
     {
@@ -63,7 +61,6 @@ public class AstralSunController : MonoBehaviour
              if (t.name == "Light")
                  sun = t.GetComponent<Light>();
          }
-        flare = sun.flare;
         
 
     }
