@@ -46,7 +46,7 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\RTS Camera\RTSCamera.cs" />
+     <Compile Include="Assets\SimTimeControls\Examples\RTSCamera.cs" />
      <Compile Include="Assets\SimTimeControls\Scripts\PlaySpeedSliderControl.cs" />
      <Compile Include="Assets\SimTimeControls\Scripts\TimeCtrlToggleGroupEventHandlers.cs" />
      <Compile Include="Assets\SimTimeControls\Scripts\TimeSlider.cs" />
@@ -57,7 +57,6 @@
      <Compile Include="Assets\SolarLunarTracking\Scripts\AstralSunController.cs" />
      <Compile Include="Assets\SolarLunarTracking\Scripts\PlaneBillboarder.cs" />
      <Compile Include="Assets\SolarLunarTracking\Scripts\SolarLunarTrackingGeolocation.cs" />
-     <Compile Include="Assets\SolarLunarTracking\Scripts\SolarTrackingGeolocation.cs" />
      <None Include="Assets\SimTimeControls\Resources\UI\NWbtnPackage\NWbtnPackage.README.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/apps/Unity5/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>

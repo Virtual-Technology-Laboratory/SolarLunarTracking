@@ -14,7 +14,7 @@ using System.Collections;
 
 namespace VTL.SolarLunarTracking
 {
-    public class SolarTrackingGeolocation : MonoBehaviour
+    public class SolarLunarTrackingGeolocation : MonoBehaviour
     {
 
         public float latitude = 43f;
@@ -22,6 +22,19 @@ namespace VTL.SolarLunarTracking
         public float altitude = 1160;
         public float timeZone = -7;
 
-
+        public void DropOnTerrain()
+        {
+           RaycastHit hitInfo;
+            if (Physics.Raycast(transform.position, Vector3.down, out hitInfo, 1000000))
+            {
+                var newpos = transform.position;
+                newpos.y -= hitInfo.distance;
+                transform.position = newpos;
+            }
+            else
+            {
+                Debug.Log("Raycast did not hit Terrain");
+            }
+        }
     }
 }
