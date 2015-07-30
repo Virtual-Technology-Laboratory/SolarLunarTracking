@@ -8,8 +8,6 @@
  * 
  */
 
-#define NODEBUG
-
 using System;
 using UnityEngine;
 using System.Collections;
@@ -51,12 +49,6 @@ namespace VTL.SolarLunarTracking
             altitude = geoLoc.altitude;
             timeZone = geoLoc.timeZone;
 
-#if DEBUG
-            Debug.Log(String.Format("Location: {0}, {1}", longitude, latitude));
-            Debug.Log(String.Format("Altitude: {0}", altitude));
-            Debug.Log(String.Format("Time Zone: {0}", timeZone));
-#endif
-
             slider = GameObject.FindWithTag("TimeSlider");
             timeSlider = (TimeSlider)slider.GetComponent<TimeSlider>();
 
@@ -75,10 +67,6 @@ namespace VTL.SolarLunarTracking
             DateTime datetime = timeSlider.SimTime;
             solar = astral.solar(datetime);
 
-#if DEBUG
-            Debug.Log(datetime);
-            Debug.Log(String.Format("Solar: {0}, {1}", solar.azimuth, solar.elevation));
-#endif
             transform.eulerAngles = new Vector3(270 + (float)solar.elevation, 180 + (float)solar.azimuth, 0);
             sun.color = solar.color_temp;
 

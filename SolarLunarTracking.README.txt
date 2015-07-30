@@ -26,6 +26,9 @@ Make sure the clipping distance of your main camera is beyond ~8000 meters to
 ensure the moon is visible. Or move the Plane under Moon to within your viewing
 range. 
 
+Changelog
+---------
+Updated to support Unity 5.1.1 API changes
 
 Acknowledgements
 ----------------

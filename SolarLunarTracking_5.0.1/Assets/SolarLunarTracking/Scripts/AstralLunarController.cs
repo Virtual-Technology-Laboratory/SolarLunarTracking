@@ -51,12 +51,6 @@ namespace VTL.SolarLunarTracking
             altitude = geoLoc.altitude;
             timeZone = geoLoc.timeZone;
 
-#if DEBUG
-            Debug.Log(String.Format("Location: {0}, {1}", longitude, latitude));
-            Debug.Log(String.Format("Altitude: {0}", altitude));
-            Debug.Log(String.Format("Time Zone: {0}", timeZone));
-#endif
-
             slider = GameObject.FindWithTag("TimeSlider");
             TimeSliderScript = (TimeSlider)slider.GetComponent(typeof(TimeSlider));
 
@@ -67,8 +61,8 @@ namespace VTL.SolarLunarTracking
             moonTextures = new List<Texture>();
             for (int i = 0; i < 28; i++)
             {
-                string fname = string.Format("Assets/SolarLunarTracking/moonTextures/Moon{0}.png", i.ToString("D2"));
-                moonTextures.Add(Resources.LoadAssetAtPath<Texture>(fname));
+                string fname = string.Format("moonTextures/Moon{0}", i.ToString("D2"));
+                moonTextures.Add(Resources.Load<Texture>(fname));
             }
         }
 
